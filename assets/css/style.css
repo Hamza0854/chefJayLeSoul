@@ -58,7 +58,7 @@ h1,h2,h3,h4{
   color: var(--soot);
   letter-spacing: .005em;
 }
-h1, h2{ text-transform: uppercase; }
+h1, h2{ text-transform: capitalize; }
 h1{ font-size: clamp(3rem, 6.4vw, 6.4rem); }
 h2{ font-size: clamp(2.4rem, 4.6vw, 4.2rem); }
 h3{ font-size: clamp(1.5rem, 2vw, 1.85rem); font-weight: 700; line-height:1.05; }
@@ -189,25 +189,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     radial-gradient(1200px 600px at 85% 30%, rgba(212,162,76,.10), transparent 60%),
     var(--soot);
   color: var(--cream);
-  min-height: 100vh; min-height: 100svh;
-  padding: calc(var(--header-h) + 28px) 0 56px;
+  /*min-height: 100vh; min-height: 100svh;*/
+  padding-top: 120px;
   display:flex; align-items:center;
 }
-.hero-grid{ display:grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 56px); align-items:center; width:100%; }
+.hero-grid{ display:grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 56px); align-items:end; width:100%; }
 .hero-copy{ position:relative; z-index: 2; }
 .hero-copy .eyebrow{ display:flex; align-items:center; gap:10px; font-size:.95rem; color: var(--gold-light); margin-bottom: 18px; }
 .hero-copy .eyebrow::before{ content:""; width:10px; height:10px; background: var(--pepper); transform: rotate(45deg); }
 .hero-copy h1{
   color: var(--cream);
-  font-size: clamp(3.6rem, 8.4vw, 8.2rem);
-  line-height: .86; letter-spacing: .01em; margin: 0;
+  font-size: clamp(3.6rem, 6.4vw, 8.2rem);
+  line-height: .86; letter-spacing: .01em; margin: 0;text-transform: capitalize;
 }
 .hero-copy h1 span{ display:block; }
 .hero-copy .rule{ width: 58%; max-width: 260px; height: 7px; margin: 26px 0 24px; }
 .hero-lede{ font-size: clamp(1.02rem, 1.2vw, 1.15rem); max-width: 40ch; opacity:.82; margin-bottom: 30px; }
 .hero-call{ display:flex; flex-direction:column; margin-top: 30px; }
 .hero-call span{ font-size:.9rem; opacity:.6; }
-.hero-call a{ font-family: var(--display); font-weight:700; font-size: clamp(1.8rem, 2.6vw, 2.4rem); color: var(--gold-light); line-height:1.1; letter-spacing:.02em; }
+.hero-call a{ font-family: var(--display); font-weight:700; font-size: clamp(1.8rem, 2.6vw, 2.4rem); color: var(--gold-light); line-height:1.1; letter-spacing:.02em;margin-bottom:35px; }
 
 /* Triangle mosaic: 3 rows x 7 tiles of alternating triangles */
 .mosaic{ position:relative; width: 100%; aspect-ratio: 1.54; }
@@ -283,7 +283,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     linear-gradient(180deg, #140f0c, var(--soot));
   color: var(--cream);
 }
-.seasoning-grid{ display:grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3.4fr); gap: clamp(28px, 4vw, 60px); align-items:center; }
+.seasoning-grid{ display:grid; grid-template-columns: minmax(0, 5fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 60px); align-items:center; }
 .seasoning h2{ color: var(--cream); }
 .seasoning .punch{ font-family: var(--display); font-weight:800; text-transform:uppercase; font-size: clamp(1.7rem, 2.6vw, 2.3rem); color: var(--gold-light); line-height:1.05; margin-bottom: 18px; letter-spacing:.02em; }
 .seasoning p{ opacity:.82; }
@@ -294,7 +294,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .uses li{ border: 1px solid var(--line-dark); border-radius: 999px; padding: 5px 14px; font-size: .88rem; color: var(--gold-light); }
 
 /* Spinning badge with the video inside */
-.spin-badge{ position:relative; width: min(100%, 380px); aspect-ratio: 1; margin-inline:auto; }
+.spin-badge{ position:relative; width: 100%; aspect-ratio: 1; margin-inline:auto; }
 .spin-badge .ring{ position:absolute; inset:0; width:100%; height:100%; animation: spin 22s linear infinite; }
 .spin-badge .ring text{ font-family: var(--display); font-weight: 800; font-size: 17px; fill: var(--gold-light); text-transform: uppercase; }
 .spin-badge .disc{
@@ -465,7 +465,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .qty-box input::-webkit-outer-spin-button, .qty-box input::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
 .buy-row{ display:flex; flex-wrap:wrap; gap: 12px; align-items:center; }
 
-.intro-duo{ display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr); gap: clamp(28px, 4vw, 56px); align-items:center; }
+.intro-duo{ display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(28px, 4vw, 56px); align-items:center; }
 
 .bundle-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .bundle{ background:#fff; border:1px solid var(--line-light); border-radius: 10px; padding: 28px 24px; text-align:center; }
